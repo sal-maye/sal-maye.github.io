@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <title>Sneaky Santa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Sneaky Santa has stolen all the gifts and wants to keep them for himself. Can you get them back?">
+    
+    <meta itemprop="name" content="Sneaky Santa"/>
+    <meta itemprop="description" content="Santa has stolen all the gifts and wants to keep them for himself. Can you get them back?"/>
+    <meta itemprop="image" content="https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2F14i_XMas_share_wide.png?1544794960296"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="Sneaky Santa"/>
+    <meta name="twitter:title" content="Sneaky Santa"/>
+    <meta name="twitter:description" content="Santa has stolen all the gifts and wants to keep them for himself. Can you get them back?"/>
+    <meta name="twitter:creator" content="14islands"/>
+    <meta name="twitter:image" content="https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2F14i_XMas_share_wide.png?1544794960296"/>
+
+    <meta property="fb:app_id" content=""/>
+    <meta property="og:title" content="Sneaky Santa"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://2018.14islands.com/"/>
+    <meta property="og:image" content="https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2F14i_XMas_share_wide.png?1544794960296"/>
+    <meta property="og:description" content="Santa has stolen all the gifts and wants to keep them for himself. Can you get them back?"/>
+    <meta property="og:site_name" content="Sneaky Santa"/>
+
+    <meta name="theme-color" content="#B1DBFF"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FC5559"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2FiOS%20icon%20180x180.png?1544542103237"/>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2FFavicon16x16.png?1544542103302" sizes="16x16">
+		<link rel="icon" type="image/png" href="https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2FFavicon32x32.png?1544542103385" sizes="32x32">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+      html, body, canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow:hidden;
+      }
+      html {
+        background: #B3DBFF;
+        background: linear-gradient(#8FC7F9, #B1DBFF);
+      }
+      * {
+        touch-action: manipulation;
+        cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjbQg61aAAAADUlEQVQYV2P4//8/IwAI/QL/+TZZdwAAAABJRU5ErkJggg=='), 
+          url(https://cdn.glitch.com/4998919d-320e-4554-8acd-ce47fbd96994%2Fblank.cur?1544392402622),
+          none !important;
+      }
+      
+      /* Old browser message */
+      html::after {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: 'Sorry! You need a more modern browser for this experience';
+        color: white; 
+      }
+    </style>
+    
+    <link href="styles.css" rel="stylesheet">
+    
+    <script>
+      // check for old browser (IE11 and below
+      if (typeof window.CustomEvent !== 'function') {
+        document.documentElement.className = 'not-supported'
+      }
+    </script>
+    <style>
+      html.not-supported::after{
+        display: block
+      }
+      html.not-supported body {
+        display: none !important;
+      }
+    </style>
+    
+    <script>
+      // Disable scrolling as fast as possible to avoid viewport bugs
+      // To prevent scrolling on modern mobile browsers you need to add the { passive: false }
+      // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+      window.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+      }, { passive: false });
+    </script>
+    
+    <script>
+    /*! modernizr 3.5.0 (Custom Build) | MIT *
+     * https://modernizr.com/download/?-touchevents-setclasses !*/
+      !function(e,n,t){function o(e,n){return typeof e===n}function s(){var e,n,t,s,a,i,r;for(var l in c)if(c.hasOwnProperty(l)){if(e=[],n=c[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(s=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],r=i.split("."),1===r.length?Modernizr[r[0]]=s:(!Modernizr[r[0]]||Modernizr[r[0]]instanceof Boolean||(Modernizr[r[0]]=new Boolean(Modernizr[r[0]])),Modernizr[r[0]][r[1]]=s),f.push((s?"":"no-")+r.join("-"))}}function a(e){var n=u.className,t=Modernizr._config.classPrefix||"";if(p&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),p?u.className.baseVal=n:u.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):p?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function r(){var e=n.body;return e||(e=i(p?"svg":"body"),e.fake=!0),e}function l(e,t,o,s){var a,l,f,c,d="modernizr",p=i("div"),h=r();if(parseInt(o,10))for(;o--;)f=i("div"),f.id=s?s[o]:d+(o+1),p.appendChild(f);return a=i("style"),a.type="text/css",a.id="s"+d,(h.fake?h:p).appendChild(a),h.appendChild(p),a.styleSheet?a.styleSheet.cssText=e:a.appendChild(n.createTextNode(e)),p.id=d,h.fake&&(h.style.background="",h.style.overflow="hidden",c=u.style.overflow,u.style.overflow="hidden",u.appendChild(h)),l=t(p,e),h.fake?(h.parentNode.removeChild(h),u.style.overflow=c,u.offsetHeight):p.parentNode.removeChild(p),!!l}var f=[],c=[],d={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){c.push({name:e,fn:n,options:t})},addAsyncTest:function(e){c.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=d,Modernizr=new Modernizr;var u=n.documentElement,p="svg"===u.nodeName.toLowerCase(),h=d._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];d._prefixes=h;var m=d.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",h.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");m(o,function(e){t=9===e.offsetTop})}return t}),s(),a(f),delete d.addTest,delete d.addAsyncTest;for(var v=0;v<Modernizr._q.length;v++)Modernizr._q[v]();e.Modernizr=Modernizr}(window,document);
+    </script>
+  </head>
+    
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31151822-4', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+  
+  <body>
+    <main>
+      
+      <div class="outro-bg js-outro-bg hidden" aria-hidden="true">
+        <div class="outro-bg-mountains">
+          <svg width="1439px" height="466px" viewBox="0 0 1439 466" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Ho-Oh-No-181210" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="11" transform="translate(0.000000, -334.000000)" fill="#9ED1FF" fill-rule="nonzero">
+                      <path d="M-1,464.640698 C78.828125,435.328193 118.742187,420.67194 118.742187,420.67194 C118.742187,420.67194 181.640625,374.838752 181.640625,374.838752 C181.640625,374.838752 282.671875,419.706218 282.671875,419.089364 C282.671875,418.69413 293.254609,411.749959 314.420076,398.256851 L314.420073,398.256845 C316.064211,397.208698 318.115138,397.024836 319.919491,397.763834 L382.997913,423.59848 C384.843208,424.354247 386.943406,424.14387 388.602132,423.037107 L520.530775,335.009414 C523.170796,333.247895 526.72599,333.847013 528.6429,336.376464 L550.308995,364.965871 C551.213393,366.159266 552.531335,366.971366 554.003931,367.242644 L593.076218,374.440461 C594.472214,374.697629 595.731823,375.441405 596.6312,376.539614 L621.114244,406.435314 C621.509619,406.918097 621.977889,407.336248 622.502162,407.674683 L674.509603,441.247151 C677.173453,442.966751 680.715433,442.316893 682.595329,439.763638 L706.135184,407.792048 C706.442207,407.375052 706.801921,406.999556 707.205358,406.674922 L740.655417,379.758607 C743.237094,377.681204 747.014026,378.089999 749.091429,380.671677 C749.424558,381.085671 749.701215,381.542084 749.91414,382.02894 L759.853172,404.754663 C760.80847,406.938965 762.966358,408.350455 765.350424,408.350455 L774.06482,408.350455 C776.054483,408.350455 777.91474,409.336786 779.031195,410.983688 L791.794403,429.810917 C793.508942,432.340065 796.94913,433.000435 799.478278,431.285895 C799.885478,431.009849 800.254041,430.680725 800.574219,430.307229 L802.086296,428.543347 C803.948381,426.371172 807.085126,425.815942 809.579695,427.216952 L855.939975,453.254016 C858.111517,454.473606 860.810723,454.224849 862.722787,452.628916 L887.018927,432.349781 C888.935096,430.750422 891.641257,430.504348 893.814476,431.731854 L925.970962,449.894915 C928.016133,451.050096 930.547295,450.905652 932.447773,449.525307 L994.768404,404.260918 C997.070982,402.588522 1000.23164,402.763707 1002.33529,404.680327 L1075.13895,471.011213 C1077.23305,472.919133 1080.37629,473.102398 1082.67793,471.450768 L1099.87869,459.107697 C1101.88596,457.667301 1104.57094,457.604553 1106.64331,458.949609 L1124.90706,470.803564 C1127.68663,472.607625 1131.4024,471.816817 1133.20647,469.037245 C1133.27232,468.935773 1133.3351,468.832332 1133.39471,468.727064 L1148.28854,442.42371 C1149.57358,440.154262 1152.17748,438.974837 1154.73089,439.505675 L1176.29421,443.988543 C1179.14468,444.581136 1182.00923,443.041864 1183.08821,440.337766 L1188.6746,426.33739 C1189.07424,425.335817 1189.73643,424.460463 1190.5915,423.803409 L1223.07257,398.844221 C1224.87399,397.459974 1227.30272,397.211876 1229.34681,398.203302 L1332.40067,448.186527 C1334.44811,449.179576 1336.88112,448.928927 1338.68309,447.539311 L1377.56725,417.5533 C1380.02466,415.658242 1383.52164,415.949737 1385.63138,418.225496 L1406.20459,440.41764 C1408.45742,442.847747 1412.2537,442.991459 1414.6838,440.73863 C1414.74751,440.679568 1414.80993,440.61913 1414.87102,440.557358 L1428.73368,426.538633 C1431.06367,424.182409 1434.8626,424.161145 1437.21883,426.491139 C1438.3586,427.618226 1439,429.15452 1439,430.75746 L1439,804 L-1,804 L-1,464.640698 Z" id="Mountains"></path>
+                  </g>
+              </g>
+          </svg>
+        </div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+      </div>
+      
+      <div class="scene js-scene">
+        <!-- Canvas is injected here -->
+      </div>
+      
+      <div class="js-debug" style="position:fixed; bottom: 1rem; right: 1rem"></div>
+    
+      <div class="LottieLoader js-loader-lottie"></div>
+      <div class="LoadProgress js-loader-progress hidden">
+        <span class="js-progress"></span><span class="LoadProgress-unitLabel">%</span>
+      </div>
+      
+      
+      <div class="Intro hidden js-intro">
+        <div class="Intro-text">
+          <div class="Intro-logo js-intro-logo"></div>
+          <p class="Intro-copy js-intro-copy js-intro-animate hidden">
+            Sneaky Santa has taken all the gifts! Can you get them back?
+          </p>
+          <div class="Intro-button Xjs-intro-animate js-intro-start js-pointer hidden">
+            <span>Start</span>
+          </div>
+        </div>
+        <div class="Intro-lottieAnimation js-intro-lottie-animation hidden"></div>
+      </div>
+
+      <div class="Santa-gameHint js-game-hint hidden">
+        <div class="Santa-gameHintIcon js-icon"></div>
+        <div class="Santa-gameHintText">
+          Grab and shake
+        </div>
+        <div class="flex-1"></div>
+      </div>
+      <div class="Santa-notification feedback1 js-notification js-pointer hidden">
+        <div class="Santa-notificationText">
+          You got one! Keep going...
+        </div>
+      </div>
+      <div class="Santa-notification feedback2 js-notification js-pointer hidden">
+        <div class="Santa-notificationText">
+          Whoop! More is more...
+        </div>
+      </div>
+      <div class="Santa-notification feedback3 js-notification js-pointer hidden">
+        <div class="Santa-notificationText">
+          Almost there...
+        </div>
+      </div>
+      
+      <div class="outro js-outro hidden">
+        
+        <div class="outro-inner">
+          <p class="outro-text outro-greet js-outro-greet is-invisible" data-splitting>
+            Ho-hooray!
+          </p>
+          <div class="outro-text outro-msg js-outro-end">
+            <span class="line is-invisible">Happy unwrapping</span><span class="line is-invisible"> and joyful holidays.</span>
+          </div>
+          <div class="share">
+            <span class="share-title js-outro-share is-invisible">With ❤︎ from 14islands.</span>
+            <span class="share-icons js-outro-share is-invisible">
+              <a href="#" onclick="window.ga('send', 'event', 'Twitter Share', 'Click', 'End');window.open('https://twitter.com/intent/tweet?url=https://2018.14islands.com', 'pop', 'width=600, height=400, scrollbars=no');return false;" class="share-icon js-pointer">
+                  <svg viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                      <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="24"/>
+                      <path d="M34.7999915,15.3766773 C33.89615,15.9747148 32.9392807,16.3555012 31.876206,16.5733869 C31.0263821,15.5961042 29.8574619,14.9992452 28.5287684,15.0000007 C25.977677,15.0014512 23.9036854,17.229764 23.9021855,19.9457812 C23.9019755,20.3260237 23.9549133,20.7062359 24.0078511,21.0864481 C20.1813339,20.8713425 16.7809586,18.917744 14.5504035,15.9313942 C14.1779494,16.6920906 13.9117607,17.5070469 13.9112508,18.4304928 C13.9102909,20.1687438 14.706667,21.6892602 15.9817328,22.5576605 C15.2376644,22.5580836 14.4937461,22.2869049 13.909301,21.9613152 L13.909271,22.0156356 C13.9079511,24.4057308 15.5012733,26.414677 17.5737951,26.8480612 C17.201701,26.9569135 16.7764891,27.0114756 16.3513072,27.0117173 C16.0324207,27.0118986 15.7667121,26.9577294 15.5010034,26.9035601 C16.0845486,28.8587602 17.7844663,30.3244425 19.8040503,30.3776145 C18.2088982,31.6822094 16.241982,32.4981327 14.1160725,32.4993414 C13.7440383,32.499553 13.3720042,32.4997645 13,32.4456557 C15.0188341,33.8568364 17.4631801,34.6702515 20.0674192,34.6687707 C28.5179095,34.6639659 33.1459322,27.1108087 33.1495619,20.5380469 L33.1499218,19.8862028 C34.0538233,19.1795245 34.8515194,18.3099457 35.4366844,17.3318471 C34.6392584,17.7125428 33.7355969,17.9846583 32.7788776,18.0938429 C33.7358668,17.4957751 34.4273274,16.5176161 34.7999915,15.3766773" fill="#FFF" transform="rotate(-2 24.218 24.834)"/>
+                    </g>
+                  </svg>
+              </a>
+              <a href="#" onclick="window.ga('send', 'event', 'Facebook Share', 'Click', 'End');window.open('https://www.facebook.com/sharer/sharer.php?u=https://2018.14islands.com', 'pop', 'width=600, height=400, scrollbars=no');return false;" class="share-icon js-pointer">
+                  <svg viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                      <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="24"/>
+                      <path d="M25.9472869,36.8120606 L25.954076,25.0040745 L30.0076104,25.0018608 L30.6152425,20.4326111 L25.956703,20.4351552 L25.9583746,17.5276611 C25.9591252,16.2222556 26.3226741,15.2726715 28.2586906,15.2716143 L30.7392116,15.2702596 L30.7415656,11.1760333 C30.3180962,11.1169279 28.8661521,10.9990476 27.1116372,11.0000058 C23.5421069,11.0019552 21.0603576,13.1394279 21.058106,17.0556444 L21.0561613,20.4378314 L17.0026269,20.4400451 L17,25.0089644 L21.0535344,25.0067507 L21.0467453,36.8147369 L25.9472869,36.8120606 Z" fill="#FFF" transform="rotate(-2 23.87 23.907)"/>
+                    </g>
+                  </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      
+    </main>
+    
+    <a class="Logo js-pointer " target="_blank" href="https://14islands.com/" title="Made with love by 14islands">
+      <span></span>
+    </a>
+    <a class="SoundIcon js-toggle-sound js-pointer" href="#" title="Toggle sound">
+      <span></span>
+    </a>
+    
+    <div class="js-cursor">
+      <div class="Cursor Cursor--default js-cursor-default"></div>
+      <div class="Cursor Cursor--pointer js-cursor-pointer"></div>
+      <div class="Cursor Cursor--pointerActive js-cursor-pointer-active"></div>
+      <div class="Cursor Cursor--grab js-cursor-grab"></div>
+      <div class="Cursor Cursor--grabActive js-cursor-grab-active"></div>
+    </div>
+    
+    <!-- Load bodymovin first and inline loader so we can show it before loading rest of site -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.1/lottie_light.min.js"></script>
+    <script>
+      var pageLoaderJSON = {"v":"5.4.1","fr":47.6280059814453,"ip":0,"op":146.000018335664,"w":200,"h":400,"nm":"Loader_5","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":1,"ty":4,"nm":"Mittens","parent":2,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[290,304,0],"ix":2,"x":"var $bm_rt;\n$bm_rt = transform.position;"},"a":{"a":0,"k":[290,320,0],"ix":1},"s":{"a":0,"k":[100,43.019,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.667,"y":1},"o":{"x":0.333,"y":0},"n":"0p667_1_0p333_0","t":98,"s":[{"i":[[3.579,2.349],[0,0],[12.483,-1.218],[1.292,12.512],[-2.29,10.325],[-3.045,-1.43],[0,0],[2.736,-3.603]],"o":[[0,0],[1.291,12.515],[-12.482,1.218],[0,0],[0.722,-3.254],[0,0],[3.613,2.765],[-2.613,3.443]],"v":[[16.75,1.499],[17.025,4.155],[-3.321,29.124],[-28.363,8.587],[-28.233,-17.827],[3.96,-28.911],[26.191,-11.914],[27.787,-0.339]],"c":true}],"e":[{"i":[[3.579,2.349],[0,0],[5.95,-0.05],[0.741,11.108],[-0.889,10.522],[-3.045,-1.43],[0,0],[2.736,-3.603]],"o":[[0,0],[-1.647,15.791],[-8.551,0.072],[0,0],[0.28,-3.321],[0,0],[3.613,2.765],[-2.613,3.443]],"v":[[8.75,-1.001],[9.275,8.405],[-7.321,26.374],[-23.613,8.337],[-22.983,-18.327],[-0.79,-28.161],[18.441,-15.664],[18.537,-4.339]],"c":true}]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"n":"0p833_1_0p167_0","t":100,"s":[{"i":[[3.579,2.349],[0,0],[5.95,-0.05],[0.741,11.108],[-0.889,10.522],[-3.045,-1.43],[0,0],[2.736,-3.603]],"o":[[0,0],[-1.647,15.791],[-8.551,0.072],[0,0],[0.28,-3.321],[0,0],[3.613,2.765],[-2.613,3.443]],"v":[[8.75,-1.001],[9.275,8.405],[-7.321,26.374],[-23.613,8.337],[-22.983,-18.327],[-0.79,-28.161],[18.441,-15.664],[18.537,-4.339]],"c":true}],"e":[{"i":[[3.579,2.349],[0,0],[5.95,-0.05],[0.741,11.108],[-0.889,10.522],[-3.045,-1.43],[0,0],[2.736,-3.603]],"o":[[0,0],[-1.647,15.791],[-8.551,0.072],[0,0],[0.28,-3.321],[0,0],[3.613,2.765],[-2.613,3.443]],"v":[[8.75,-1.001],[9.275,8.405],[-7.5,19.874],[-23.613,8.337],[-22.983,-18.327],[-0.79,-28.161],[18.441,-15.664],[18.537,-4.339]],"c":true}]},{"t":102.000012809848}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.071000005685,0.6,0.46699999641,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[182.872,316.054],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.333,0.333],"y":[0,0]},"n":["0p833_1_0p333_0","0p833_1_0p333_0"],"t":47,"s":[100,100],"e":[110,110]},{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.167,0.167],"y":[0,0]},"n":["0p833_1_0p167_0","0p833_1_0p167_0"],"t":71,"s":[110,110],"e":[110,110]},{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.167,0.167],"y":[0,0]},"n":["0p833_1_0p167_0","0p833_1_0p167_0"],"t":100,"s":[110,110],"e":[100,100]},{"t":102.000012809848}],"ix":3},"r":{"a":1,"k":[{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"n":["0p833_1_0p333_0"],"t":47,"s":[0],"e":[25]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"n":["0p833_1_0p167_0"],"t":71,"s":[25],"e":[25]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"n":["0p833_1_0p167_0"],"t":100,"s":[25],"e":[0]},{"t":102.000012809848}],"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"His righ","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.667,"y":1},"o":{"x":0.333,"y":0},"n":"0p667_1_0p333_0","t":98,"s":[{"i":[[-3.579,2.349],[0,0],[-12.482,-1.218],[-1.293,12.512],[2.29,10.325],[3.045,-1.43],[0,0],[-2.737,-3.603]],"o":[[0,0],[-1.292,12.515],[12.483,1.218],[0,0],[-0.722,-3.254],[0,0],[-3.612,2.765],[2.613,3.443]],"v":[[-16.749,1.499],[-17.024,4.155],[3.321,29.124],[28.364,8.587],[28.233,-17.827],[-3.959,-28.911],[-26.191,-11.914],[-27.786,-0.339]],"c":true}],"e":[{"i":[[-3.579,2.349],[0,0],[-6.184,-0.066],[-1.227,13.858],[0.154,11.022],[3.045,-1.43],[0,0],[-3.327,-4.966]],"o":[[0,0],[-1.292,12.515],[6.816,0.072],[0,0],[-0.046,-3.333],[0,0],[-0.922,1.11],[1.808,2.698]],"v":[[-8.249,-2.001],[-9.024,7.155],[7.321,26.624],[22.364,9.087],[22.733,-18.077],[-0.709,-27.661],[-17.941,-15.414],[-19.036,-3.589]],"c":true}]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"n":"0p833_1_0p167_0","t":100,"s":[{"i":[[-3.579,2.349],[0,0],[-6.184,-0.066],[-1.227,13.858],[0.154,11.022],[3.045,-1.43],[0,0],[-3.327,-4.966]],"o":[[0,0],[-1.292,12.515],[6.816,0.072],[0,0],[-0.046,-3.333],[0,0],[-0.922,1.11],[1.808,2.698]],"v":[[-8.249,-2.001],[-9.024,7.155],[7.321,26.624],[22.364,9.087],[22.733,-18.077],[-0.709,-27.661],[-17.941,-15.414],[-19.036,-3.589]],"c":true}],"e":[{"i":[[-3.579,2.349],[0,0],[-6.184,-0.066],[-1.227,13.858],[0.154,11.022],[3.045,-1.43],[0,0],[-3.327,-4.966]],"o":[[0,0],[-1.292,12.515],[6.816,0.072],[0,0],[-0.046,-3.333],[0,0],[-0.922,1.11],[1.808,2.698]],"v":[[-8.249,-2.001],[-9.024,7.155],[7.142,20.124],[22.364,9.087],[22.733,-18.077],[-0.709,-27.661],[-17.941,-15.414],[-19.036,-3.589]],"c":true}]},{"t":102.000012809848}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.071000005685,0.6,0.46699999641,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[278.613,316.054],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.333,0.333],"y":[0,0]},"n":["0p833_1_0p333_0","0p833_1_0p333_0"],"t":47,"s":[100,100],"e":[110,110]},{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.167,0.167],"y":[0,0]},"n":["0p833_1_0p167_0","0p833_1_0p167_0"],"t":71,"s":[110,110],"e":[110,110]},{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.167,0.167],"y":[0,0]},"n":["0p833_1_0p167_0","0p833_1_0p167_0"],"t":100,"s":[110,110],"e":[100,100]},{"t":102.000012809848}],"ix":3},"r":{"a":1,"k":[{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"n":["0p833_1_0p333_0"],"t":47,"s":[0],"e":[-25]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"n":["0p833_1_0p167_0"],"t":71,"s":[-25],"e":[-25]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"n":["0p833_1_0p167_0"],"t":100,"s":[-25],"e":[0]},{"t":102.000012809848}],"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"His left","np":2,"cix":2,"ix":2,"mn":"ADBE Vector Group","hd":false},{"ty":"tr","p":{"a":0,"k":[230.743,320.14],"ix":2},"a":{"a":0,"k":[230.743,320.14],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Mittens","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":714.000089668933,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":4,"nm":"Arms","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"s":true,"x":{"a":1,"k":[{"i":{"x":[0.995],"y":[1]},"o":{"x":[0.005],"y":[0]},"n":["0p995_1_0p005_0"],"t":0,"s":[161],"e":[161]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.024],"y":[0]},"n":["0p833_1_0p024_0"],"t":103,"s":[161],"e":[161]},{"t":123.000015447169}],"ix":3},"y":{"a":1,"k":[{"i":{"x":[0],"y":[1.009]},"o":{"x":[0.005],"y":[0.068]},"n":["0_1p009_0p005_0p068"],"t":0,"s":[-94],"e":[346]},{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[1],"y":[0.002]},"n":["0p833_0p833_1_0p002"],"t":103,"s":[346],"e":[-174]},{"t":123.000015447169}],"ix":4}},"a":{"a":0,"k":[290,320,0],"ix":1},"s":{"a":0,"k":[100,232.456,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[4.035,28.549],[0,48.872]],"o":[[-6.157,-30.039],[-7.667,-54.256],[0,0]],"v":[[13.395,121.287],[-1.893,33.406],[-13.395,-121.287]],"c":false},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"st","c":{"a":0,"k":[0.991999966491,0.322000002394,0.322000002394,1],"ix":3},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":6,"ix":5},"lc":1,"lj":1,"ml":10,"ml2":{"a":0,"k":10,"ix":8},"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[159.71,177.199],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[97.048,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"His right","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[-4.051,28.781],[0,48.652]],"o":[[6.21,-30.297],[7.598,-53.987],[0,0]],"v":[[-13.394,121.287],[1.997,32.671],[13.395,-121.287]],"c":false},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"st","c":{"a":0,"k":[0.991999966491,0.322000002394,0.322000002394,1],"ix":3},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":6,"ix":5},"lc":1,"lj":1,"ml":10,"ml2":{"a":0,"k":10,"ix":8},"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[301.926,177.049],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"His left","np":2,"cix":2,"ix":2,"mn":"ADBE Vector Group","hd":false},{"ty":"tr","p":{"a":0,"k":[230.743,177.049],"ix":2},"a":{"a":0,"k":[230.743,177.049],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Arms","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":714.000089668933,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"Gift","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"s":true,"x":{"a":1,"k":[{"i":{"x":[0.974],"y":[1]},"o":{"x":[0.026],"y":[0]},"n":["0p974_1_0p026_0"],"t":102,"s":[163.7],"e":[163.7]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0],"y":[0]},"n":["0p833_1_0_0"],"t":120,"s":[163.7],"e":[163.7]},{"t":122.000015321582}],"ix":3},"y":{"a":1,"k":[{"i":{"x":[0.941],"y":[1.081]},"o":{"x":[1],"y":[-0.069]},"n":["0p941_1p081_1_-0p069"],"t":102,"s":[158],"e":[-282]},{"t":122.000015321582}],"ix":4}},"a":{"a":0,"k":[290,320,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"n":"0p833_1_0p167_0","t":107,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[16.39,-39.902],[9.018,-34.965],[9.018,-44],[-8.8,-44],[-8.8,-34.965],[-16.55,-39.902],[-25.101,-27.563],[-23.59,-26.727],[-9.652,-26.727],[-9.902,49],[-0.5,49],[9.402,49],[9.652,-26.727],[23.59,-26.727],[25.101,-27.563]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-9.45,0.015],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[10.3,-0.235],[0,0],[0,0],[0,0],[0,0]],"v":[[16.39,-38.589],[9.018,-33.652],[9.018,-42.688],[-8.8,-42.688],[-8.8,-33.652],[-16.55,-38.589],[-25.101,-26.25],[-23.59,-25.414],[-9.652,-25.414],[-9.854,55.812],[-0.55,57.062],[9.504,56.312],[9.652,-25.414],[23.59,-25.414],[25.101,-26.25]],"c":true}]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"n":"0p833_1_0p167_0","t":110,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-9.45,0.015],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[10.3,-0.235],[0,0],[0,0],[0,0],[0,0]],"v":[[16.39,-38.589],[9.018,-33.652],[9.018,-42.688],[-8.8,-42.688],[-8.8,-33.652],[-16.55,-38.589],[-25.101,-26.25],[-23.59,-25.414],[-9.652,-25.414],[-9.854,55.812],[-0.55,57.062],[9.504,56.312],[9.652,-25.414],[23.59,-25.414],[25.101,-26.25]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[16.39,-39.902],[9.018,-34.965],[9.018,-44],[-8.8,-44],[-8.8,-34.965],[-16.55,-39.902],[-25.101,-27.563],[-23.59,-26.727],[-9.652,-26.727],[-9.902,49],[-0.5,49],[9.402,49],[9.652,-26.727],[23.59,-26.727],[25.101,-27.563]],"c":true}]},{"t":130.000016326276}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[1,0.834999952129,0,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[226.3,491.5],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Ribbon","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-49,-17.076],[-49,-0.149],[-49,17.076],[-45.288,17.076],[45.288,17.076],[49,17.076],[49,-0.527],[49,-17.076]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.231000010173,0.411999990426,0.689999988032,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[226.3,481.348],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100.357,99.012],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Top","np":2,"cix":2,"ix":2,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.833,"y":1},"o":{"x":0.853,"y":0},"n":"0p833_1_0p853_0","t":107,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-45.288,20.788],[-27.451,20.788],[45.288,20.788],[45.288,-1.068],[45.288,-20.788],[-45.288,-20.788],[-45.288,-2.19]],"c":true}],"e":[{"i":[[0,0],[-30.079,-0.341],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[30.193,-0.09],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-45.288,20.788],[-0.433,29.071],[45.288,20.788],[45.276,-10.057],[45.288,-20.788],[-45.288,-20.788],[-45.551,-9.731]],"c":true}]},{"i":{"x":0.833,"y":1},"o":{"x":0.245,"y":0},"n":"0p833_1_0p245_0","t":110,"s":[{"i":[[0,0],[-30.079,-0.341],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[30.193,-0.09],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-45.288,20.788],[-0.433,29.071],[45.288,20.788],[45.276,-10.057],[45.288,-20.788],[-45.288,-20.788],[-45.551,-9.731]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-45.288,20.788],[-27.451,20.788],[45.288,20.788],[45.276,-10.057],[45.288,-20.788],[-45.288,-20.788],[-45.551,-9.731]],"c":true}]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"n":"0p833_1_0p167_0","t":130,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-45.288,20.788],[-27.451,20.788],[45.288,20.788],[45.276,-10.057],[45.288,-20.788],[-45.288,-20.788],[-45.551,-9.731]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[-45.288,20.788],[-27.451,20.788],[45.288,20.788],[45.276,-10.057],[45.288,-20.788],[-45.288,-20.788],[-45.551,-9.731]],"c":true}]},{"t":142.000017833317}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.169000004787,0.317999985639,0.545000023935,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[226.3,518.212],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[99.963,99.601],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Bottom","np":2,"cix":2,"ix":3,"mn":"ADBE Vector Group","hd":false},{"ty":"tr","p":{"a":0,"k":[226.3,490],"ix":2},"a":{"a":0,"k":[226.3,490],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Gift","np":3,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":714.000089668933,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":4,"nm":"Shadow","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[99.9,377,0],"ix":2},"a":{"a":0,"k":[226,540,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.333,0.333,0.333],"y":[0,0,0]},"n":["0p833_1_0p333_0","0p833_1_0p333_0","0p833_1_0p333_0"],"t":103,"s":[100,100,100],"e":[0,0,100]},{"t":121.000015195996}],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,-4.971],[32.585,0],[0,4.971],[-32.585,0]],"o":[[0,4.971],[-32.585,0],[0,-4.971],[32.585,0]],"v":[[59,0],[0,9],[-59,0],[0,-9]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.580392181873,0.792156875134,0.980392158031,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[226,540],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Shadow","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":714.000089668933,"st":0,"bm":0}],"markers":[]}
+  
+      const config = {
+        container: document.querySelector('.js-loader-lottie'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        rendererSettings: {
+          progressiveLoad: false
+        },
+        animationData: pageLoaderJSON
+      }
+      // store reference for loader indicator component so it can destroy this later
+      window.pageLoadAnimation = bodymovin.loadAnimation(config)
+    </script>
+    
+    <!-- Start loading assets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- FIXME: ANALYTICS TAGS GOES HERE -->
+  </body>
+</html>
